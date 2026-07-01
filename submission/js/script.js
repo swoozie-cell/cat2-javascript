@@ -114,3 +114,35 @@ themeBtn.addEventListener("click", function(){
 if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark-mode");
 }
+
+// Dynamically add & remove elements
+/* This section handles the wishlist functionality, allowing users to add and remove items dynamically such as what tattoos they would want*/
+
+const input = document.getElementById("wishlistInput");
+const addBtn = document.getElementById("addBtn");
+const wishlist = document.getElementById("wishlist");
+if(addBtn && input && wishlist){
+
+addBtn.addEventListener("click", function () {
+
+    const tattoo = input.value;
+
+    const li = document.createElement("li");
+    li.textContent = tattoo;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+
+    removeBtn.addEventListener("click", function () {
+        li.remove();
+    });
+
+    li.appendChild(removeBtn);
+
+    wishlist.appendChild(li);
+
+    input.value = "";
+});
+}
+console.log("Wishlist functionality initialized successfully.");
+
