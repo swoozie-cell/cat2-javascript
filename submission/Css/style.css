@@ -3,11 +3,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+.hero{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.75);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    opacity: 0;
+
+    transition: opacity .5s ease;
+}
+
+.hero-overlay.show{
+    opacity: 1;
+}
+
+.hero-overlay h2{
+    color: gold;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.hero-overlay p{
+    width: 70%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.portfolio-btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: gold;
+    color: #111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.portfolio-btn:hover{
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
 
 body {
     font-family: 'Philosopher', sans-serif;
     color: black;
-    background: color white;
+    background-color:  white;
 }
 
 section h2 {
@@ -65,6 +125,7 @@ html {
     color: gold;
 }
 
+
 .logo img {
     width: 50px;
     height: auto;
@@ -77,7 +138,7 @@ html {
 }
 
 .hero {
-    background-image:url(../images/images_used/tattooshop2.jpg) ;
+    background-image:url(../images_used/required_images/tattooshop2.jpg) ;
     height: 120vh;
     background-position: center;
     background-size: cover;
@@ -119,7 +180,122 @@ html {
     box-shadow: 0 0 20px gold;
     transform: scale(1.05);
 }
+.addbtn{
+    padding: 15px 30px;
+    background-color: rgb(147, 145, 133);
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
 
+}
+
+#themeBtn{
+    background: transparent;
+    color: rgb(20, 20, 19);
+    border: 2px solid gold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#themeBtn:hover{
+    background: rgb(240, 240, 239);
+    color: black;
+    box-shadow: 0 0 15px gold;
+    transform: translateY(-2px);
+}
+
+#themeBtn:active{
+    transform: scale(0.95);
+}
+.dark-mode{
+    background-color: #121212;
+    color: #f5f5f5;
+}
+.dark-mode .navbar{
+    background: #000;
+}
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4{
+    color: gold;
+}
+
+.dark-mode p{
+    color: #ddd;
+}
+.dark-mode .services{
+    background: #1b1b1b;
+}
+
+.dark-mode .service-card{
+    background: #252525;
+    color: white;
+    box-shadow: 0 10px 25px rgba(255,215,0,0.15);
+}
+.dark-mode .testimonials{
+    background: #181818;
+}
+
+.dark-mode .testimonial{
+    background: #252525;
+    color: white;
+}
+
+.dark-mode .testimonial p{
+    color: #ddd;
+}
+.dark-mode .gallery{
+    background: #1b1b1b;
+}
+.dark-mode .featured-rooms{
+    background: #181818;
+}
+
+.dark-mode .room-info{
+    color: white;
+}
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select{
+    background: #2b2b2b;
+    color: white;
+    border: 1px solid gold;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder{
+    color: #bbb;
+}
+.dark-mode button{
+    background: gold;
+    color: black;
+}
+
+.dark-mode button:hover{
+    background: #ffd700;
+}
+.dark-mode .footer{
+    background: #000;
+}
+
+.dark-mode .footer p,
+.dark-mode .footer h3{
+    color: white;
+}
+.dark-mode .wishlist{
+    background: #181818;
+}
+
+.dark-mode #wishlist li{
+    background: #252525;
+    color: white;
+}
 .btn {
     padding: 15px 30px;
     background-color: gold;
@@ -207,6 +383,7 @@ html {
 .gallery,
 .testimonials,
 .featured-rooms,
+.wishlist,
 .footer {
     padding: 70px 5%;
 }
@@ -251,6 +428,81 @@ html {
 
 .service-card img{
     transition: 0.5s ease;
+}
+/* Tattoo Wishlist */
+
+.wishlist{
+    padding: 80px 10%;
+    background: #f7f5f5;
+    text-align: center;
+}
+
+.wishlist h2{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.wishlist input{
+    width: 300px;
+    padding: 12px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.wishlist button{
+    padding: 12px 20px;
+    margin-left: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.wishlist button:hover{
+    background: #d1f78d;
+    color: rgb(20, 20, 20);
+}
+
+#wishlist{
+    list-style: none;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wishlist li{
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+#wishlist li button{
+    background: crimson;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+#wishlist li button:hover{
+    background: darkred;
+}
+#message{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .testimonials{
@@ -423,6 +675,7 @@ button {
     padding-bottom: 20px;
 }
 
+
 .footer {
     background-color: #0f172a;
     color: white;
@@ -436,3 +689,32 @@ button {
     margin: 0 10px;
 }
 
+
+/* Update your existing mobile media query with these additions */
+@media screen and (max-width: 730px) {
+   .lab-grid {
+        grid-template-columns: 1fr;
+   }
+
+   header h1 {
+        font-size: 2.1em;
+        letter-spacing: 3px;
+   }
+
+   section {
+        padding: 20px;
+   }
+
+   .form-row {
+        flex-direction: column;
+   }
+
+   .form-row button {
+        width: 100%;
+   }
+
+   .dynamic-list li {
+        flex-direction: column;
+        align-items: stretch;
+   }
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -6,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png" type="image/png">
+    <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png"
+        type="image/png">
     <nav class="navbar">
-        <div class="logo"> <img src="f:\tattoo stuff\tattoo.png" alt="TATTOO Logo" >
+        <div class="logo"> <img src="f:\tattoo stuff\tattoo.png" alt="TATTOO Logo">
             <h1>MIND YOUR SKINS</h1>
         </div>
         <ul class="nav-links">
@@ -17,7 +17,9 @@
             <li><a href="about.html">About</a></li>
             <li><a href="booking.html">Booking</a></li>
             <li><a href="contact.html">Contact</a></li>
+
         </ul>
+        <button id="themeBtn">🌙 </button>
     </nav>
     <title>Mind Your Skins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +27,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
+
 <main>
-    <section class="hero"> 
+
+   <section class="hero" id="heroBanner">
+
+    <div class="hero-content">
         <h1>Welcome to Mind Your Skins</h1>
-        <p>Your ultimate destination for unique and personalized tattoo experiences.</p> <a href="booking.html" class="cta-button">Book Now</a>
-    </section>
+
+        <p>Your ultimate destination for unique and personalized tattoo experiences.</p>
+
+       >
+    </div>
+
+    <div id="heroOverlay" class="hero-overlay">
+        <h2>Ink Beyond Imagination</h2>
+        <p>
+            Specializing in realism, blackwork, Japanese, and fine-line tattoos.
+            Every tattoo is designed to tell your story.
+        </p>
+        <a href="portfolio.html" class="portfolio-btn">
+        View My Portfolio
+    </a>
+    </div>
+
+</section>
     <section class="featured-rooms">
         <h2>OUR STYLES</h2>
         <div class="rooms-grid">
@@ -53,79 +75,58 @@
             </div>
         </div>
     </section>
-   <section class="services">
-    <h2>OTHER STYLES</h2>
+    <section class="services">
+        <h2>OTHER STYLES</h2>
 
-    <div class="service-container">
-
-        <div class="service-card">
-            <img src="f:\tattoo stuff\neotrad.jpg" alt="Neotraditional Tattoo">
-            <h3>NEOTRADITIONAL TATTOOS</h3>
-            <p>We specialize in neotraditional tattoos, blending classic techniques with modern designs.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="f:\tattoo stuff\blackwork.jpg" alt="Blackwork Tattoo">
-            <h3>BLACKWORK TATTOOS</h3>
-            <p>Our blackwork tattoos are bold and striking, perfect for making a statement.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="f:\tattoo stuff\watercolor.jpg" alt="Watercolor Tattoo">
-            <h3>WATERCOLOR TATTOOS</h3>
-            <p>Experience the beauty of watercolor tattoos, with vibrant colors and artistic designs.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="f:\tattoo stuff\realism2.jpg" alt="Realism Tattoo">
-            <h3>REALISM TATTOOS</h3>
-            <p>Our realism tattoos capture intricate details and lifelike representations.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="f:\tattoo stuff\color.jpg" alt="Color Tattoo">
-            <h3>COLOR TATTOOS</h3>
-            <p>Vibrant and colorful tattoos that make a bold statement.</p>
-        </div>
-
-    </div>
-</section>
+        <div class="service-container" id="service-container"></div>
+    </section>
     <section class="testimonials">
-    <h2>WHAT OUR CLIENTS SAY</h2>
+        <h2>WHAT OUR CLIENTS SAY</h2>
 
-    <div class="testimonial-container">
+        <div class="testimonial-container">
 
-        <div class="testimonial">
-            <p>"Mind Your Skins exceeded my expectations! The staff was incredibly friendly, and the tattoo experience was top-notch. I can't wait to come back!"</p>
-            <h4>— John Doe</h4>
+            <div class="testimonial">
+                <p>"Mind Your Skins exceeded my expectations! The staff was incredibly friendly, and the tattoo
+                    experience was top-notch. I can't wait to come back!"</p>
+                <h4>— John Doe</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>"I had an amazing experience at Mind Your Skins. The studio was clean and welcoming, and the artists
+                    were highly skilled."</p>
+                <h4>— Jane Smith</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>"Mind Your Skins is my go-to tattoo studio. The artists are talented, and the atmosphere is
+                    fantastic."</p>
+                <h4>— Emily Johnson</h4>
+            </div>
+
         </div>
+    </section>
+    <section class="wishlist">
+        <h2>My Tattoo Wishlist</h2>
 
-        <div class="testimonial">
-            <p>"I had an amazing experience at Mind Your Skins. The studio was clean and welcoming, and the artists were highly skilled."</p>
-            <h4>— Jane Smith</h4>
-        </div>
+        <input type="text" id="wishlistInput" placeholder="Enter a tattoo idea">
 
-        <div class="testimonial">
-            <p>"Mind Your Skins is my go-to tattoo studio. The artists are talented, and the atmosphere is fantastic."</p>
-            <h4>— Emily Johnson</h4>
-        </div>
+        <button id="addBtn">Add</button>
 
-    </div>
-</section>
+        <ul id="wishlist"></ul>
+    </section>
+
     <section class="gallery">
         <h2>Gallery</h2>
         <div class="gallery-images">
-            <img src="c:\Users\Manus\OneDrive\Pictures\Uploads\tattoo\IMG-20260603-WA0035.jpg" alt="Tattoo ">
-             <img src="c:\Users\Manus\OneDrive\Pictures\Uploads\tattoo\IMG-20260603-WA0043.jpg" alt="Tattoo ">
-             <img src="c:\Users\Manus\OneDrive\Pictures\Uploads\tattoo\IMG-20260603-WA0039.jpg" alt="Tattoo ">
-              <img src="f:\tattoo stuff\1.jpg" alt="Tattoo 1">
-             <img src="f:\tattoo stuff\2.jpg" alt="Tattoo 2"> 
-             <img src="f:\tattoo stuff\3.jpg" alt="Tattoo 3">
+
+            <img src="f:\tattoo stuff\1.jpg" alt="Tattoo 1">
+            <img src="f:\tattoo stuff\2.jpg" alt="Tattoo 2">
+            <img src="f:\tattoo stuff\3.jpg" alt="Tattoo 3">
             <img src="f:\tattoo stuff\4.jpg" alt="Tattoo 4">
             <img src="f:\tattoo stuff\5.jpg" alt="Tattoo 5">
             <img src="f:\tattoo stuff\6.jpg" alt="Tattoo 6">
             <img src="f:\tattoo stuff\7.jpg" alt="Tattoo 7">
-         </div>
+        </div>
     </section>
 </main>
 <footer class="footer">
@@ -136,17 +137,16 @@
         <p>Location: Nairobi, Kenya</p>
     </div>
     <div class="footer-socials">
-        <h3>Follow Us</h3> <a href="https://www.instagram.com/mind.your.skins/#">Instagram</a> 
+        <h3>Follow Us</h3> <a href="https://www.instagram.com/mind.your.skins/#">Instagram</a>
     </div>
     <div class="footer-copy">
         <p>&copy; 2026 Mind Your Skins. All Rights Reserved.</p>
     </div>
+    <script src="../js/script.js" type="text/javascript"></script>
 </footer>
 
-<body> </body>
 
 </html>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -162,29 +162,37 @@
             <h1>Mind Your Skins</h1>
         </div>
         <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
+            <li><a href="home.html" >Home</a></li>
             <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="booking.html">Booking</a></li>
             <li><a href="contact.html">Contact</a></li>
+ 
         </ul>
+         <button id="themeBtn">🌙 </button>
     </nav>
     <title> Mind Your Skins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+     <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png" type="image/png">
+        
     <section class="rooms">
         <h1 class="section-title">THE ARTIST</h1>
         <div class="rooms-container">
-        <div class="room-card"> <img src="c:\Users\Manus\OneDrive\Pictures\Uploads\tattoo\manu.jpg" alt="tattoo artist">
+           
+        <div class="room-card"> <img src="../images_used/manu.jpg" alt="tattoo artist">
             <h2>MANU</h2>
             <p>A talented tattoo artist with a passion for creating unique and personalized designs.</p>
             <p> He offers a wide range of tattoo styles, from traditional to modern, ensuring each client gets a one-of-a-kind piece.</p> <a href="booking.html" class="cta-button">Book Now</a>
         </div>
         
+       
+        
     </div>
     </section>
+    
     
 </body>
 <footer class="footer">
@@ -201,6 +209,7 @@
         <p>&copy; 2026 Mind Your Skins. All Rights Reserved.</p>
     </div>
 </footer>
+<script src="../js/script.js" type="text/javascript"></script>
 
 </html>
 
@@ -222,12 +231,13 @@
                 <li><a href="booking.html">Booking</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
-          
+         <button id="themeBtn">🌙 </button>
         </nav>
         <title>Contact Us - Mind Your Skins</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+         <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png" type="image/png">
 
      <section class="contact-banner">
         <h1 class="section-title">Contact Us</h1>
@@ -300,7 +310,7 @@
 
 </footer>
         
-        
+      <script src="../js/script.js" type="text/javascript"></script>
 
 
 
@@ -331,21 +341,23 @@
                 <li><a href="booking.html" class="active">Booking</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 </ul>
-          
+           <button id="themeBtn">🌙 </button>
         </nav>
-        <title>Book Your Stay - Mind Your Skins</title>
+        <title>Book Your Appointment - Mind Your Skins</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+            <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png" type="image/png">
+
 
     </head>
     <section class="booking-banner">
-        <h1 class="section-title">Book Your Stay</h1>
-        <p>Experience the luxury and comfort of Mind Your Skins by reserving your room today. Our easy-to-use online booking form allows you to select your room type, check-in and check-out dates, and any special requests to ensure a memorable stay.</p>
+        <h1 class="section-title">Book Your Appointment</h1>
+        <p>Experience the luxury and comfort of Mind Your Skins by reserving your appointment today. Our easy-to-use online booking form allows you to select your tattoo type, appointment date, and any special requests to ensure a memorable experience.</p>
         </section>
     <section class="booking-form">
         <h2 class="section-title">Booking Form</h2>
-        <form action="submit_booking.php" method="post">
+        <form id="bookingForm">
             <label for="full-name">Full Name:</label>
             <input type="text" id="full-name" name="full-name" required>
             
@@ -364,11 +376,11 @@
                 <option value="fineline">Fineline Tattoo</option>
             </select>
             
-            <label for="check-in">Check-in Date:</label>
-            <input type="date" id="check-in" name="check-in" required>
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
             
-            <label for="check-out">Check-out Date:</label>
-            <input type="date" id="check-out" name="check-out" required>
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
             
             <label for="tattoos">Number of Tattoos:</label>
             <input type="number" id="tattoos" name="tattoos" min="1" max="10" required>
@@ -377,15 +389,20 @@
             <textarea id="requests" name="requests" rows="4"></textarea>
             
             <button type="submit">Submit Booking</button>
+            <p id="message"></p>
+           
             </form>
             </section>
             <section class="booking-info">
                 <h2 class="section-title">Booking Information</h2>
-                <p><strong>Check-in Time:</strong> 3:00 PM</p>
-                <p><strong>Check-out Time:</strong> 11:00 AM</p>
-                <p><strong>Cancellation Policy:</strong> Cancellations made within 24 hours of check-in will incur a fee of one night's stay.</p>
-                <p><strong>Payment Notice:</strong> Full payment is required at the time of booking. We accept all major credit cards and PayPal.</p>
+                <p><strong>Appointment Time:</strong>  9:00 AM</p>
+                <p><strong>End Time:</strong> 7:00 PM</p>
+                <p><strong>Cancellation Policy:</strong> Cancellations made within 24 hours of the appointment will incur a fee.</p>
+                <p><strong>Payment Notice:</strong> Payment is required at the time of booking. We accept all major credit cards and PayPal.</p>
                 </section>
+<script src="../js/script.js" type="text/javascript"></script>
+
+    </body>
 
 <footer class="footer">
 
@@ -403,6 +420,7 @@
     </div>
 
 
+
     
     <div class="footer-socials">
 
@@ -411,6 +429,7 @@
          ]<a href="https://www.instagram.com/mind.your.skins/#">Instagram</a>
 
     </div>
+
 
 
     <div class="footer-copy">
@@ -426,8 +445,8 @@
 
 
 
-    </html>
 
+    </html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -452,12 +471,13 @@
                 <li><a href="booking.html">Booking</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 </ul>
-          
+           <button id="themeBtn">🌙 </button>
         </nav>
         <title>About Us - Mind Your Skins</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+         <link rel="icon" href="https://tattooluststudio.com/wp-content/uploads/2025/06/cropped-logo-1-32x32.png" type="image/png">
         <header>
             <h1 class="section-title">About Us</h1>
             </header>
@@ -506,6 +526,7 @@
                         <li>Client Satisfaction: We prioritize the needs and preferences of our clients, ensuring that every tattoo is exceptional.</li>
                     </ul>
                     </section>
+                    <script src="../js/script.js" type="text/javascript"></script>
                     </body>
 
            <footer class="footer">
@@ -524,6 +545,7 @@
     </div>
 
 
+
     
     <div class="footer-socials">
 
@@ -531,6 +553,7 @@
 <a href="https://www.instagram.com/mind.your.skins/">Instagram</a> 
 
     </div>
+
 
 
     <div class="footer-copy">
@@ -544,6 +567,7 @@
         
         
         
+
 
 
 
