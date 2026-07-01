@@ -59,3 +59,35 @@ if(heroBanner && heroOverlay){
 
 }
 console.log("Hero banner toggle functionality initialized successfully.");
+ //Form handling with validation feedback
+ /* This section handles the booking form submission, providing feedback to the user based on input validation giving short alerts and comments */
+const bookingForm = document.getElementById("bookingForm");
+const message = document.getElementById("message");
+
+if(bookingForm && message){
+
+bookingForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const fullName = document.getElementById("full-name").value;
+    const email = document.getElementById("email").value;
+    const tattoo = document.getElementById("tattoo-type").value;
+    const date = document.getElementById("appointment-date").value;
+
+    if(fullName === "" || email === "" || tattoo === "" || date === ""){
+
+        message.textContent = "Please fill in all required fields.";
+        message.style.color = "red";
+
+    }else{
+
+        message.textContent = "Booking submitted successfully!";
+        message.style.color = "green";
+
+        bookingForm.reset();
+
+    }
+
+});
+}
