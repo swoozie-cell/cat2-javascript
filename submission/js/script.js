@@ -91,3 +91,26 @@ bookingForm.addEventListener("submit", function(event){
 
 });
 }
+
+
+//Persistent state with localStorage
+/* This section manages the theme toggle functionality, allowing users to switch between just  light and dark modes the writings were affected too */
+const themeBtn = document.getElementById("themeBtn");
+if(themeBtn){
+
+themeBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme","dark");
+    }else{
+        localStorage.setItem("theme","light");
+    }
+
+});
+}
+
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+}
