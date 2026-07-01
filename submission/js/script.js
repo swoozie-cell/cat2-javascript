@@ -44,3 +44,18 @@ services.forEach(service => {
 }
 console.log("Service cards generated successfully.");
 
+//Click-to-reveal on your banner
+/* clicking on my banner toggles the overlay which takes the user directly to my portfolio then to the booking form */
+const heroBanner = document.getElementById("heroBanner");
+const heroOverlay = document.getElementById("heroOverlay");
+
+if(heroBanner && heroOverlay){
+
+    heroBanner.addEventListener("click", function(){
+
+        heroOverlay.classList.toggle("show");
+
+    });
+
+}
+console.log("Hero banner toggle functionality initialized successfully.");
