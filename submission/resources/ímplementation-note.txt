@@ -1,0 +1,43 @@
+Implementation Notes
+
+ note:: i have five pages  in which i had to use if statements so as it wont affect each other while running
+
+🔁 Loop-rendered Dynamic Content
+
+**Code Reference:** `/* Loop-rendered Dynamic Content */`
+
+I stored the different tattoo styles in the `services` array. Each object has a `name`, `image`, and `description`. I then used `services.forEach()` to go through the array and display each service card inside the `service-container` instead of writing every card directly in the HTML.
+
+---
+
+ 🖼️ Click-to-Reveal Banner
+
+**Code Reference:** `/* Click-to-Reveal Banner */`
+
+I added a click event to the hero banner so that when a user clicks on it, the overlay appears or disappears. This is done using `classList.toggle("show")`, making the banner interactive and allowing users to view extra information.
+
+---
+
+✅ Form Handling with Validation Feedback
+
+**Code Reference:** `/* Form Handling with Validation Feedback */`
+
+The booking form uses JavaScript to check that all the required fields have been filled in before the form is submitted. I used `event.preventDefault()` to stop the page from refreshing and displayed either an error message or a success message depending on the user's input.
+
+---
+
+💾 Persistent State with localStorage
+
+**Code Reference:** `/* Persistent State with localStorage */`
+
+I used `localStorage` to save the user's theme preference. If the user chooses dark mode, that choice is remembered even after the page is refreshed or reopened.
+
+---
+
+➕ Dynamically Add & Remove Elements
+
+**Code Reference:** `/* Dynamically Add & Remove Elements */`
+
+I created a wishlist where users can type in tattoo ideas they would like. When they click the Add button, a new item is added to the list. Each item also has its own Remove button so it can be deleted whenever the user wants.
+ 
+ 
